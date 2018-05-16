@@ -20,3 +20,5 @@ def raise_to(exp):
 
 square = raise_to(2) # This creates a closure so the local function has access to the initial parameters
 print(square(5))
+cube = raise_to(3)
+print(cube(5))
