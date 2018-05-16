@@ -88,6 +88,6 @@ class HighSchoolStudent(Student):
 
 
 
-james = HighSchoolStudent('james')
-print(james.get_name_capitalize())
-print(james.get_school_name())
+# james = HighSchoolStudent('james')
+# print(james.get_name_capitalize())
+# print(james.get_school_name())
