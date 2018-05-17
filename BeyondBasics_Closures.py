@@ -22,3 +22,41 @@ square = raise_to(2) # This creates a closure so the local function has access t
 print(square(5))
 cube = raise_to(3)
 print(cube(5))
+
+
+# Global scope within closure of nested functions.
+message = 'global'
+
+def enclosing():
+    message = 'enclosing'
+
+    def local():
+        global message
+        message = 'local'
+
+    print('Enclosing message:', message)
+    local()
+    print('Enclosing message:', message)
+
+print('global message:', message)
+enclosing()
+print('global message:', message)
+
+
+# Using nonlocal to change enclosing message
+message = 'global'
+
+def enclosing():
+    message = 'enclosing'
+
+    def local():
+        nonlocal message
+        message = 'local'
+
+    print('Enclosing message:', message)
+    local()
+    print('Enclosing message:', message)
+
+print('global message:', message)
+enclosing()
+print('global message:', message)
