@@ -25,7 +25,6 @@ print(northern_city())
 
 
 
-
 # Can use classes as decorators since they're callable
 class CallCount:
     def __init__(self, f):
@@ -113,6 +112,7 @@ class IslandMaker:
 
 im = IslandMaker(' Island')
 print(im.make_island('Python'))
+
 
 
 
